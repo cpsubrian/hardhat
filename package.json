@@ -1,0 +1,21 @@
+{
+  "author": "Brian Link <cpsubrian@gmail.com>",
+  "name": "hardhat",
+  "description": "Scaffolding utility for blue-collar programmers.",
+  "version": "0.0.1",
+  "homepage": "http://cantina.github.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cantina/hardhat.git"
+  },
+  "main": "./lib/hardhat.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
