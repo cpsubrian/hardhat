@@ -29,7 +29,9 @@ Features
 Installation
 ------------
 ### Install via npm (node package manager) ###
-`[sudo] npm install hardhat`
+```
+[sudo] npm install hardhat
+```
 
 
 Usage
