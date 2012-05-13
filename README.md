@@ -6,11 +6,13 @@ HardHat
 
 About / Why?
 ------------
-There are a few other scaffolding libraries out there, some more recently
+There are a [few](http://search.npmjs.org/#/scaffold) [other](http://search.npmjs.org/#/scaffolder)
+[scaffolding](http://search.npmjs.org/#/scaffoldit) libraries out there, some more recently
 updated than others.  One thing most of them share in common is that they all do
-a little too much. I don't need option parsing, I can use optimist. I don't
-need a command prompt library, prompt already takes care of that. I don't need
-cli routing, I'm happy to use flatiron/director.
+a little too much. I don't need option parsing, I can use [optimist](https://github.com/substack/node-optimist).
+I don't need a command prompt library, [prompt](https://github.com/flatiron/prompt)
+already takes care of that. I don't need cli routing, I'm happy to use
+[flatiron](https://github.com/flatiron/flatiron)/[director](https://github.com/flatiron/director).
 
 HardHat aims to solve specific problems and be another tool in your overall
 command-line application.
@@ -21,7 +23,7 @@ Features
 
   * `scaffold()`: Copy a directory of scaffold folders & files (templates) to a
     new destination.
-      * Your templates can be written using any engine that consolidate supports
+      * Your templates can be written using any engine that [consolidate](https://github.com/visionmedia/consolidate.js) supports
         (currently 14 engines including jade, handlebars, etc.)
   * More?  Pull requests welcome :)
 
@@ -41,8 +43,8 @@ Usage
 The scaffold() method copies files and directories from one location to
 another, optionally applying template data to them.
 
-The templating is powered by consolidate, so you can use any of its
-supported engines (jade, handlebars, ejs, etc.).
+The templating is powered by [consolidate](https://github.com/visionmedia/consolidate.js), so
+you can use any of its supported engines (jade, handlebars, ejs, etc.).
 
 ```js
 var hardhat = require('hardhat');
