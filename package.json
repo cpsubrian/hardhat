@@ -2,6 +2,7 @@
   "author": "Brian Link <cpsubrian@gmail.com>",
   "name": "hardhat",
   "description": "Scaffolding utility for blue-collar programmers.",
+  "keywords": ["scaffold", "cli", "copy", "file", "directory", "directories"],
   "version": "0.0.1",
   "homepage": "http://cantina.github.com",
   "repository": {
