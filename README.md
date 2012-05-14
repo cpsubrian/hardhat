@@ -3,6 +3,7 @@ HardHat
 
 **Scaffolding utility for blue-collar programmers.**
 
+[![Build Status](https://secure.travis-ci.org/cantina/hardhat.png)](http://travis-ci.org/cantina/hardhat)
 
 About / Why?
 ------------
