@@ -3,7 +3,7 @@
   "name": "hardhat",
   "description": "Scaffolding utility for blue-collar programmers.",
   "keywords": ["scaffold", "cli", "copy", "file", "directory", "directories"],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "http://cantina.github.com",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "consolidate": "~0.3.0",
     "dive": "~0.2.0",
     "mkdirp": "~0.3.2",
-    "fs-extra": "~0.0.4",
+    "fs-extra": "~0.1.0",
     "async": "~0.1.18"
   },
   "devDependencies": {
