@@ -14,13 +14,13 @@ module.exports = function assertDeepDiveEqual(dirIn, dirOut, ext, done) {
     ext = 'tpl';
   }
 
-  assert.ok(path.existsSync(dirIn), 'dirIn does not exist');
-  assert.ok(path.existsSync(dirOut), 'dirOut does not exist');
+  assert.ok(fs.existsSync(dirIn), 'dirIn does not exist');
+  assert.ok(fs.existsSync(dirOut), 'dirOut does not exist');
 
   dive(dirIn, {all: true, directories: true}, function(err, file) {
     var relative = file.replace(dirIn, '');
     var copied = path.join(dirOut, relative).replace('.' + ext + '.', '.');
-    assert.ok(path.existsSync(copied), 'output file `<dirOut>' + copied.replace(dirOut, '') + '` was not copied');
+    assert.ok(fs.existsSync(copied), 'output file `<dirOut>' + copied.replace(dirOut, '') + '` was not copied');
   }, function() {
     done();
   });
