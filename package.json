@@ -17,7 +17,7 @@
     "consolidate": "~0.3.0",
     "dive": "~0.2.0",
     "mkdirp": "~0.3.2",
-    "async": "~0.1.18"
+    "async": "0.2.x"
   },
   "devDependencies": {
     "mocha": "~1.0.3",
