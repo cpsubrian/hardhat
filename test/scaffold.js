@@ -7,7 +7,8 @@ var assert = require('assert'),
     rimraf = require('rimraf'),
     fs = require('fs'),
     hardhat = require('../'),
-    assertDeepDiveEqual = require('./helpers/assertDeepDiveEqual');
+    assertDeepDiveEqual = require('./helpers/assertDeepDiveEqual'),
+    assertDeepDiveMatches = require('./helpers/assertDeepDiveMatches');
 
 describe('Scaffold', function() {
   var dirIn,
@@ -20,13 +21,31 @@ describe('Scaffold', function() {
   });
 
   describe('Plain Scaffolding', function() {
-    beforeEach(function(done){
+    before(function(){
       dirIn = path.join(__dirname, 'fixtures/plain');
-      hardhat.scaffold(dirIn, dirOut, done);
+    });
+
+    after(function() {
+      options = {};
     });
 
     it('should copy the files and folders from `in` to `out`', function(done) {
-      assertDeepDiveEqual(dirIn, dirOut, done);
+      hardhat.scaffold(dirIn, dirOut, options, function (err) {
+        assert.ifError(err);
+        assertDeepDiveEqual(dirIn, dirOut, done);
+      });
+    });
+
+    it('should apply provided filter', function(done) {
+      options.match = /pine/;
+      hardhat.scaffold(dirIn, dirOut, options, function (err) {
+        assert.ifError(err);
+        assertDeepDiveMatches(dirIn, dirOut, options.match, function (err, ct) {
+          assert.ifError(err);
+          assert.strictEqual(ct, 1);
+          done();
+        });
+      });
     });
   });
 

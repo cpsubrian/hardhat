@@ -62,7 +62,8 @@ var options = {
   engine: 'handlebars', // The consolidate-supported template engine to use.
   ext: 'tpl', // The extension prefix to trigger templating (see below).
   encoding: 'utf8', // The file encoding for templates (non templates can be any encoding).
-  data: {} // Template data to pass to the engine.
+  data: {}, // Template data to pass to the engine.
+  match: {RegExp|Function|String} // A regular expression, function, or string that files must match to be copied.
 };
 ```
 
